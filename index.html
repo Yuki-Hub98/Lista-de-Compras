@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de compras</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/c46e2ab208.js" crossorigin="anonymous"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Market List</title>
 </head>
+
 <body>
-    <input type="text" placeholder="teste LocalStore">
-    <button type="submit">enviar</button>
+  <header>
+    <h1>Lista de Mercado</h1>
+    <h2>Minha Lista</h2>
+  </header>
+
+  <main>
+    <div>
+      <input type="text" id="item" placeholder="Digite o item">
+      <button id="add"><i class="fa-solid fa-plus" style="color: #000;"></i></button>
+    </div>
+    <ul id="itemList">
+    </ul>
+  </main>
+
+  <script src="./js/script.js"></script>
 </body>
-<script src="./src/js/app.js"></script>
+
 </html>
