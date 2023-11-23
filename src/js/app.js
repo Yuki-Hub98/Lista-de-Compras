@@ -34,13 +34,6 @@ const postDB = (lista_compras) => {
 postDB(produtos)
 
 
-/*const render = () => {
-    const DB = getDB();
-    DB.forEach((item,indice) => {
-        createItem(id, nome, valor)
-    });
-} */
-
 const adcionar = (nome, preco, tipo) => {
     for (let i = 0; i < 1 ; i++) {
          produtos.push({"id": produtos.length, "nome": "banana", "preco":3, "tipo": "fruta"})
@@ -69,42 +62,19 @@ const excluir = (item) => {
 
 excluir("banana")
 
-const editar = () => {
-    
+const editar = (item, itemEditado) => {
+    let array = getDB().map((produtos) => {
+        if (produtos.nome === item) {
+            produtos.nome = itemEditado
+        }
+        return produtos
+    })
+    postDB(array);
 }
 
 
+editar("Tomate", "Melancia");
 
-/*const editar = (id, nome, preco, tipo) => {
-    let attDados =  getDB();
-    console.log(attDados)
-    let edit = {}
-    for (let i = 0; i < 1; i++) {
-        if (attDados.id === id) {
-            edit = attDados[i]
-            edit.nome = nome
-            edit.preco = preco
-            edit.tipo = tipo
-        }
- 
-     }
-
-     
-    
-    
-    
-
-    postDB(attDados)
-} */
-
-//editar(1, "cebola", 7, "verdura");
-
-//console.log(getDB());
-//console.log(getDB());
-
-//postDB(produtos = [{"id": produtos.lenght, "nome":"banana", "preco": 3, "tipo":"fruta"}])
-
-//console.log(getDB());
 
 
 
